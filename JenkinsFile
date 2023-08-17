@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        FEATURE_BRANCHES = ['feature/branch1', 'feature/branch2', 'feature/branch3'] // Add your feature branch names here
+        FEATURE_BRANCHES = ['fee', 'fe'] // Add your feature branch names here
     }
 
     stages {
