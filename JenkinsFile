@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+    environment {
+        FEATURE_BRANCHES = ['feature/branch1', 'feature/branch2', 'feature/branch3'] // Add your feature branch names here
+    }
+
+    stages {
+        stage('Delete Branches') {
+            steps {
+                script {
+                    FEATURE_BRANCHES.each { branch ->
+                        def gitDeleteBranch = """
+                            git push origin --delete ${branch}
+                        """
+                        sh gitDeleteBranch
+                    }
+                }
+            }
+        }
+    }
+}
