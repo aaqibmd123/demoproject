@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    QA {
+    environment {
         FEATURE_BRANCHES = ['fee', 'fe']
     }
 
