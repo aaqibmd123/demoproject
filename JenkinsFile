@@ -1,8 +1,8 @@
 pipeline {
     agent any
 
-    environment {
-        FEATURE_BRANCHES = ['fee', 'fe'] // Add your feature branch names here
+    qa {
+        FEATURE_BRANCHES = ['fee', 'fe']
     }
 
     stages {
