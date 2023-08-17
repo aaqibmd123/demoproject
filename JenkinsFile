@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    qa {
+    QA {
         FEATURE_BRANCHES = ['fee', 'fe']
     }
 
